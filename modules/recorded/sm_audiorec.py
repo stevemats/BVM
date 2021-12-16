@@ -1,5 +1,5 @@
 import speech_recognition as sr
-import sys
+from datetime import datetime as dt
 
 # To Do: output transcription, path for file to trascribe
 
@@ -18,3 +18,8 @@ def short_recognizer():
         # recognize (convert from speech to text)
         text = r.recognize_google(audio_data)
         print(text)
+
+        time_now = dt.now()  # get current time of PS change
+        new_time = time_now.strftime("%m-%d-%Y_%H-%M-%S")
+        with open('speechtext_' + new_time + '.txt', 'w') as f:
+            f.write(text)

@@ -5,7 +5,7 @@
 # https://github.com/stevemats/BVM
 #----------------------------------------------------------------
 
-from modules.recorded.la_audiorec import large_transcription
+from modules.recorded.la_audiorec import *
 from modules.recorded.sm_audiorec import short_recognizer
 from modules.live.live_recognizer import live_recognizer 
 
@@ -43,7 +43,7 @@ def main():
                 short_recognizer()
                 break
             elif choice == 2:
-                large_transcription()
+                get_large_audio_transcription()
                 break
             elif choice == 3:
                 live_recognizer()
