@@ -4,11 +4,15 @@
 # A journey of a thousand miles starts with one step!
 # https://github.com/stevemats/BVM
 #----------------------------------------------------------------
-
+import sys
 from modules.recorded.la_audiorec import *
 from modules.recorded.sm_audiorec import short_recognizer
 from modules.live.live_recognizer import live_recognizer 
 
+if sys.version_info < (3, 0, 0):
+    print('[!] Please use Python 3 to run Banja.')
+    print("Your Current Python Version is:", sys.version)
+    exit()
 
 
 def banner():
